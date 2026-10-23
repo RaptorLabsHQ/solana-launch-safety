@@ -1,0 +1,8 @@
+# solana-launch-safety: hosts observed draining wallets of Solana token creators or impersonating Solmint.
+# Source: RaptorLabs, https://github.com/RaptorLabsHQ/solana-launch-safety (CC BY 4.0).
+# Generated from blocklist.json on 2026-10-23. Categories: drainer, impersonation. One host per line.
+blank-ckd.pages.dev
+ccreator.io
+solmintdev.com
+vote-timeless28rh37trg.pages.dev
+walletadapter-cdn-cloud.com
