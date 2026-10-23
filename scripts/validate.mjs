@@ -12,7 +12,7 @@ const CATEGORIES = ['drainer', 'impersonation', 'third-party-blocklist', 'lookal
 const REQUIRED = ['host', 'category', 'first_observed', 'last_checked', 'status', 'observed', 'also_listed_by', 'notes'];
 const DATE = /^\d{4}-\d{2}-\d{2}$/;
 const HOST = /^[a-z0-9.-]+\.[a-z]{2,}$/;
-const DASHES = /[–—]/;
+const DASHES = /[\u2013\u2014]/;
 
 const errors = [];
 const seen = new Set();
