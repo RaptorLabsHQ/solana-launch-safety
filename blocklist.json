@@ -3,7 +3,7 @@
   "name": "solana-launch-safety",
   "description": "Hosts observed draining wallets of Solana token creators or impersonating Solmint (solmint.dev), with evidence, plus look-alike names kept for disambiguation. Maintained by RaptorLabs.",
   "maintainer": "RaptorLabs, https://raptorlabs.dev, security@raptorlabs.dev",
-  "updated": "2026-10-23",
+  "updated": "2026-11-01",
   "categories": {
     "drainer": "Served, loaded or backed a wallet-draining kit at the time of observation. Evidence is a saved copy of the code or a public verdict by a third party.",
     "impersonation": "Presented itself as Solmint or used Solmint's names, handles or wording to mislead users. No wallet-draining behaviour was observed unless stated.",
@@ -17,7 +17,7 @@
       "host": "ccreator.io",
       "category": "drainer",
       "first_observed": "2026-10-19",
-      "last_checked": "2026-10-23",
+      "last_checked": "2026-11-01",
       "status": "restricted: Cloudflare 'Suspected Phishing' interstitial (HTTP 403)",
       "observed": "The page at /?app=spoodle rendered a bare 'Connect Wallet' prompt that loaded https://blank-ckd.pages.dev/blank.js and sent a beacon to walletadapter-cdn-cloud.com, a pattern consistent with a wallet-draining kit. A copy of the loader was saved on 2026-10-19.",
       "also_listed_by": [
@@ -33,8 +33,8 @@
       "host": "blank-ckd.pages.dev",
       "category": "drainer",
       "first_observed": "2026-10-19",
-      "last_checked": "2026-10-23",
-      "status": "restricted: the loader at /blank.js now answers HTTP 404; Cloudflare restricted it on 2026-10-19 with a 'Suspected Malware' interstitial",
+      "last_checked": "2026-11-01",
+      "status": "restricted: /blank.js answers Cloudflare's 'Suspected Malware' interstitial (HTTP 403)",
       "observed": "Hosted blank.js, the loader of the wallet-draining kit used by ccreator.io.",
       "also_listed_by": [
         "Cloudflare: restricted on 2026-10-19 after an abuse report"
@@ -45,8 +45,8 @@
       "host": "vote-timeless28rh37trg.pages.dev",
       "category": "drainer",
       "first_observed": "2026-10-19",
-      "last_checked": "2026-10-23",
-      "status": "restricted (HTTP 403)",
+      "last_checked": "2026-11-01",
+      "status": "restricted: Cloudflare 'Suspected Phishing' interstitial (HTTP 403)",
       "observed": "A second host of the same wallet-draining kit, found in the 2026-10-19 sweep.",
       "also_listed_by": [
         "Cloudflare: restricted on 2026-10-19 after an abuse report"
@@ -57,8 +57,8 @@
       "host": "walletadapter-cdn-cloud.com",
       "category": "drainer",
       "first_observed": "2026-10-19",
-      "last_checked": "2026-10-23",
-      "status": "no content (HTTP 404)",
+      "last_checked": "2026-11-01",
+      "status": "resolves; no content (HTTP 404)",
       "observed": "Beacon and backend of the kit loaded by ccreator.io. Registered 2026-07-20.",
       "also_listed_by": [
         "PhishDestroy: malicious, sinkholed"
@@ -69,7 +69,7 @@
       "host": "solmintdev.com",
       "category": "impersonation",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
+      "last_checked": "2026-11-01",
       "status": "taken down: the app host removed it on 2026-10-19; the apex shows Cloudflare's 'Suspected Phishing' interstitial (HTTP 403) and the www host no longer answers",
       "observed": "Registered 2026-09-27. Used the 'SoLMintDev' name that Solmint uses on its social accounts, mirrored Solmint's page title and published fabricated statistics (400,000+ tokens, 25,000+ users, 'Secure & Audited'). Its public token endpoint showed eight tokens ever. No wallet-draining code was found in its bundle.",
       "also_listed_by": [
@@ -84,7 +84,7 @@
       "host": "officialsolmint.com",
       "category": "third-party-blocklist",
       "first_observed": "2022-01-27",
-      "last_checked": "2026-10-23",
+      "last_checked": "2026-11-01",
       "status": "not registered (no DNS)",
       "observed": "Added to Phantom's blocklist on 2022-01-27 within a batch of 'official Solana NFT mint' phishing names. In that batch 'solmint' means 'SOL mint'. The name predates solmint.dev and was never affiliated with it.",
       "also_listed_by": [
@@ -96,7 +96,7 @@
       "host": "officialsolmint.net",
       "category": "third-party-blocklist",
       "first_observed": "2022-02-09",
-      "last_checked": "2026-10-23",
+      "last_checked": "2026-11-01",
       "status": "not registered (no DNS)",
       "observed": "Added to Phantom's blocklist on 2022-02-09 in the same batch as officialsolmint.com. Never affiliated with solmint.dev.",
       "also_listed_by": [
@@ -108,8 +108,8 @@
       "host": "solmint.click",
       "category": "lookalike-suspended",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "suspended by its registrar (serverHold); does not resolve",
+      "last_checked": "2026-11-01",
+      "status": "suspended by its registrar (serverHold); does not resolve (NXDOMAIN)",
       "observed": "Look-alike name found in the 2026-10-17 sweep; flagged by MetaMask and Google before the sweep.",
       "also_listed_by": [
         "MetaMask phishing configuration",
@@ -121,8 +121,8 @@
       "host": "solmints.xyz",
       "category": "lookalike-suspended",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "suspended by its registrar (clientHold); does not resolve",
+      "last_checked": "2026-11-01",
+      "status": "suspended by its registrar (clientHold); does not resolve (NXDOMAIN)",
       "observed": "Look-alike name found in the 2026-10-17 sweep.",
       "also_listed_by": [
         "Scam Sniffer scam-database"
@@ -131,20 +131,20 @@
     },
     {
       "host": "solmint.online",
-      "category": "lookalike-watch",
+      "category": "not-affiliated",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "registered; no valid certificate; no content observed",
-      "observed": "Registered look-alike with mail records and no site. Not affiliated with solmint.dev.",
+      "last_checked": "2026-11-01",
+      "status": "live (HTTP 200): a Solana token creator page titled 'SolMint - Solana Token Creator & Manager'",
+      "observed": "Registered look-alike with mail records and no site until 2026-10-23. On 2026-11-01 it served a Solana token creator page under the name SolMint with a 0.05 SOL base fee. Not affiliated with solmint.dev.",
       "also_listed_by": [],
-      "notes": "No concern is implied."
+      "notes": "Moved from lookalike-watch on 2026-11-01 because it now serves content. No concern is implied; listed so people can tell the names apart."
     },
     {
       "host": "sol-mint.app",
       "category": "lookalike-watch",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "registered; connection refused; no content observed",
+      "last_checked": "2026-11-01",
+      "status": "registered; resolves; the connection failed at the 2026-11-01 check; no content observed",
       "observed": "Registered look-alike with no site. Not affiliated with solmint.dev.",
       "also_listed_by": [],
       "notes": "No concern is implied."
@@ -153,8 +153,8 @@
       "host": "solmint.xyz",
       "category": "lookalike-watch",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "registered; answers HTTP 200; parked or no Solmint-related content at the last review",
+      "last_checked": "2026-11-01",
+      "status": "registered; answers HTTP 200 with a domain-for-sale page",
       "observed": "Registered look-alike. Not affiliated with solmint.dev.",
       "also_listed_by": [],
       "notes": "No concern is implied."
@@ -163,8 +163,8 @@
       "host": "solmint.fun",
       "category": "lookalike-watch",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "registered; answers HTTP 200; parked or no Solmint-related content at the last review",
+      "last_checked": "2026-11-01",
+      "status": "does not resolve (NXDOMAIN) at the 2026-11-01 check; it answered HTTP 200 with no Solmint-related content on 2026-10-23",
       "observed": "Registered look-alike. Not affiliated with solmint.dev.",
       "also_listed_by": [],
       "notes": "No concern is implied."
@@ -173,8 +173,8 @@
       "host": "solmints.com",
       "category": "lookalike-watch",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "registered; no valid certificate; no content observed",
+      "last_checked": "2026-11-01",
+      "status": "registered; redirects to a domain-for-sale page (HTTP 200)",
       "observed": "Registered look-alike with no site. Not affiliated with solmint.dev.",
       "also_listed_by": [],
       "notes": "No concern is implied."
@@ -183,7 +183,7 @@
       "host": "solmint.net",
       "category": "not-affiliated",
       "first_observed": "2025-08-22",
-      "last_checked": "2026-10-23",
+      "last_checked": "2026-11-01",
       "status": "live (HTTP 200)",
       "observed": "A separate token-creation service operating under a near-identical name since 2025, listed in Phantom's app directory as 'Solmint.net'. It has no relationship with solmint.dev or RaptorLabs. No wallet-draining behaviour was observed on it.",
       "also_listed_by": [],
@@ -193,8 +193,8 @@
       "host": "solmint.com",
       "category": "not-affiliated",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "live",
+      "last_checked": "2026-11-01",
+      "status": "live (HTTP 200)",
       "observed": "An unrelated site (calculators) that shares part of the name. Not affiliated with solmint.dev. No concern observed.",
       "also_listed_by": [],
       "notes": ""
@@ -203,8 +203,8 @@
       "host": "sol-mint.com",
       "category": "not-affiliated",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "live",
+      "last_checked": "2026-11-01",
+      "status": "live (HTTP 200)",
       "observed": "An unrelated vanity-wallet generator that shares part of the name. Not affiliated with solmint.dev. No concern observed.",
       "also_listed_by": [],
       "notes": ""
@@ -213,8 +213,8 @@
       "host": "solmintfactory.com",
       "category": "not-affiliated",
       "first_observed": "2026-10-17",
-      "last_checked": "2026-10-23",
-      "status": "live",
+      "last_checked": "2026-11-01",
+      "status": "live (HTTP 200)",
       "observed": "An unrelated site that shares part of the name. Not affiliated with solmint.dev. No concern observed.",
       "also_listed_by": [],
       "notes": ""
